@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    background: hsla(253, 57%, 60%, 1);
+
+    background: linear-gradient(315deg, hsla(253, 57%, 60%, 1) 16%, hsla(314, 58%, 49%, 1) 100%);
+
+    background: -moz-linear-gradient(315deg, hsla(253, 57%, 60%, 1) 16%, hsla(314, 58%, 49%, 1) 100%);
+
+    background: -webkit-linear-gradient(315deg, hsla(253, 57%, 60%, 1) 16%, hsla(314, 58%, 49%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7960D3", endColorstr="#C634A3", GradientType=1 );
+
+}
+
+.container{
+    max-height: 300px;
+    margin-top: 100px;
+    padding: 10px;
+    max-width: 350px;
+    width: 100%;
+    border: 1px solid #2e2d2d;
+    border-radius: 10px;
+    overflow: auto;
+    background-color: #faf9f9;
+    box-shadow: 3px 4px 3px 2px rgba(99, 95, 95, 0.37);
+    overflow-x: hidden;
+}
+
+.container .topic{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.container .topic img{
+    height: 28px;
+}
+
+.search-area{
+    display: flex;
+    width: 100%;
+    background-color: rgba(224, 216, 216, 0.568);
+    border-radius: 50px;
+    height: 30px;
+    margin-top: 8px;
+    
+}
+
+.search-area .search{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+
+.search-area .search:focus{
+    outline: none;
+}
+
+.search-area .btn{
+    padding: 0px 20px ;
+    border: 0;
+    border-radius: 50px;
+    background-color: rgb(247, 102, 50);
+    color: white;
+}
+
+.container .task-list{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container .task-list .task{
+    max-width: 100%;
+    display: flex;
+    padding: 0 0 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px dashed grey;
+    line-height: 2;
+}
+
+.container .task-list .task div{
+    width: 85%;
+    overflow-wrap: break-word;
+}
+
+.container .task-list .task p{
+    
+    line-height: 1;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.container .task-list .task span{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.container .task-list .task span:hover{
+    background-color: rgba(128, 128, 128, 0.568); 
+}
+
+.container .task-list .task.checked p{
+    text-decoration: line-through;
+}
+
+.container .task-list .task.checked::before{
+    background-image: url("images/checked.png");
+}
+
+.container .task-list .task::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    border: 1px solid rgba(0, 0, 0, 0.918);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+}
